@@ -1,0 +1,21 @@
+  <mat-grid-list cols="3" rowHeight="1:1.5">
+    <mat-grid-tile>
+      
+      <mat-card class="card">
+        <mat-card-header>
+          <mat-card-title>{{pokemonInput.name}}</mat-card-title>
+        </mat-card-header>
+        <img mat-card-image [src]="pokemonInput.sprites.front_default" [alt]="pokemonInput.name">
+        <mat-card-content>
+          
+          <mat-chip-list aria-label="Fish selection">
+            <mat-chip  *ngFor="let tipo of pokemonInput.types">{{tipo.type.name}}</mat-chip>
+          </mat-chip-list>
+          
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-stroked-button color="primary">Ver más...</button>
+        </mat-card-actions>
+      </mat-card>
+    </mat-grid-tile>
+    </mat-grid-list>
