@@ -9,12 +9,12 @@
         <mat-card-content>
           
           <mat-chip-list aria-label="Fish selection">
-            <mat-chip  *ngFor="let tipo of pokemonInput.types">{{tipo.type.name}}</mat-chip>
+            <mat-chip appChangeColoroType [nameType]="tipo.type.name" *ngFor="let tipo of pokemonInput.types">{{tipo.type.name}}</mat-chip>
           </mat-chip-list>
           
         </mat-card-content>
         <mat-card-actions>
-          <button mat-stroked-button color="primary">Ver más...</button>
+          <button (click)="GotoDescription(pokemonInput.id)" mat-stroked-button color="primary">Ver más...</button>
         </mat-card-actions>
       </mat-card>
     </mat-grid-tile>

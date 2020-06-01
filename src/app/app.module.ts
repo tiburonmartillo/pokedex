@@ -22,10 +22,12 @@ import { DescriptionPokemonCardComponent } from './componentes/description-pokem
 import { GridCardsComponent } from './components/grid-cards/grid-cards.component';
 import {MatChipsModule} from '@angular/material/chips';
 import {MatIconModule} from '@angular/material/icon'; 
-import {MatProgressSpinnerModule} from '@angular/material/progress-spinner'; 
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { ChangeColoroTypeDirective } from './direcivas/change-coloro-type.directive';
+import { BusquedaComponentComponent } from './components/busqueda-component/busqueda-component.component'; 
 
 @NgModule({
-  declarations: [AppComponent, SidenavComponent, CardsComponent, DescriptionPokemonCardComponent, GridCardsComponent],
+  declarations: [AppComponent, SidenavComponent, CardsComponent, DescriptionPokemonCardComponent, GridCardsComponent, ChangeColoroTypeDirective, BusquedaComponentComponent],
   imports: [
     appRouting,
     BrowserModule,

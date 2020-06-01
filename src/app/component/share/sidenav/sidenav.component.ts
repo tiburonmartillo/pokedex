@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output,EventEmitter  } from '@angular/core';
+
 
 @Component({
   selector: 'app-sidenav',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidenavComponent implements OnInit {
 
+@Input() abrirSidenav;
+@Output() cerrarSideNav = new EventEmitter<boolean>();
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+  cerrarSidenavmethod(){
+    this.cerrarSideNav.emit(false)
   }
 
 }

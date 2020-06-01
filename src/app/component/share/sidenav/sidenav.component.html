@@ -1,7 +1,9 @@
-<mat-drawer  class="example-sidenav" mode="side">
-    <p>Auto-resizing sidenav</p>
-    <p >Lorem, ipsum dolor sit amet consectetur.</p>
+<mat-drawer  class="example-sidenav" [opened]="abrirSidenav" mode="over">
+  <mat-icon (click)="cerrarSidenavmethod()">close</mat-icon>  
+  
+  <p>Para buscar tu pokemon</p>
+    <p>Aquie mero</p>
     <button mat-raised-button>
-      Toggle extra text
+      Buscar poquemon
     </button>
   </mat-drawer>
